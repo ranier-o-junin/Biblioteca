@@ -23,5 +23,12 @@ public class Biblioteca {
             .filter(livro ->livro.getAutor().equalsIgnoreCase(autor))
             .collect(Collectors.toList());
     }
+
+    public Livro buscarPorIsbn(String isbn){
+        return livros.stream()
+            .filter(livro -> livro.getIsbn().equals(isbn))
+            .findFirst()
+            .orElse(null);
+    }
     
 }
