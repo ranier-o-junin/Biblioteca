@@ -12,6 +12,11 @@ public class Biblioteca {
     public List<Livro> listaLivros(){
         return new ArrayList<>(livros);
     }
+    /**
+     * Busca Livros por autor, ignorando maiusculas/minusculas.
+     * @param autor Nome do autor a ser buscado.
+     * @return Lista de livros do autor especificado.
+     */
 
     public List<Livro> buscaPorAutor(String autor){
         return livros.stream()
